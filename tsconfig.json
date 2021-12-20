@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+    "baseUrl": "./src",
+    "outDir": "./public",
     "target": "es5",
     "lib": [
       "dom",
@@ -18,7 +20,13 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "paths": {
+      "@shared/*": ["shared/*"],
+      "@core/*": ["core/*"],
+      "@components/*": ["components/*"],
+    },
+    "typeRoots": ["node_modules/@types"],
   },
   "include": [
     "src"
